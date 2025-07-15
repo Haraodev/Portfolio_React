@@ -34,12 +34,12 @@ Para rodar o projeto localmente, siga os passos abaixo:
 ## Funcionalidades Principais
 
 - Destacar minhas habilidades em desenvolvimento web.
-- Exibir projetos como AluraFlix, WeatherAPI e AluraGeek.
+- Exibir projetos como AluraFlix, WeatherAPI e FirebaseDB.
 
 ## Contato
 
 - LinkedIn: [Felipe Harão](https://linkedin.com/in/felipe-harão)
-- GitHub: [Kiaizen](https://github.com/Kiaizen/Portfolio_React)
+- GitHub: [Harão](https://github.com/Haraodev/Portfolio_React)
 - Link do Portfólio: [portfolioharao.netlify.app](https://portfolioharao.netlify.app)
 
 ---
