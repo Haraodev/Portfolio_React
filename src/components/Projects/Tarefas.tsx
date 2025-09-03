@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import ProjectWrapper from "../wrapper/ProjectsWrapper";
 
 type Tarefa = {
@@ -17,7 +17,7 @@ function Tarefas({ onToggleProjectState }: Props) {
   const [tarefas, setTarefas] = useState<Tarefa[]>([]);
   const [titulo, setTitulo] = useState("");
   const [descricao, setDescricao] = useState("");
-  const [idEditando, setIdEditando] = useState<number | null>(null);
+  const [isEditando, setIsEditando] = useState<number | null>(null);
 
   const carregarTarefas = async () => {
     try {
@@ -46,15 +46,15 @@ function Tarefas({ onToggleProjectState }: Props) {
   const limparFormulario = () => {
     setTitulo("");
     setDescricao("");
-    setIdEditando(null);
+    setIsEditando(null);
   };
 
   const salvarTarefa = async (e: React.FormEvent) => {
     e.preventDefault();
 
     const tarefa = { titulo, descricao };
-    const endpoint = idEditando ? "update.php" : "create.php";
-    const dados = idEditando ? { ...tarefa, id: idEditando } : tarefa;
+    const endpoint = isEditando ? "update.php" : "create.php";
+    const dados = isEditando ? { ...tarefa, id: isEditando } : tarefa;
 
     try {
       const res = await fetch(`${API}/${endpoint}`, {
@@ -74,7 +74,7 @@ function Tarefas({ onToggleProjectState }: Props) {
   };
 
   const editarTarefa = (t: Tarefa) => {
-    setIdEditando(t.id);
+    setIsEditando(t.id);
     setTitulo(t.titulo);
     setDescricao(t.descricao);
   };
@@ -108,11 +108,11 @@ function Tarefas({ onToggleProjectState }: Props) {
         >
           Voltar
         </button>
-
-        <form onSubmit={salvarTarefa} className="space-y-4 mb-8">
+        <form  onSubmit={salvarTarefa} className="space-y-4 mb-8">
           <input
             type="text"
             placeholder="Título"
+            name="Tarefa Título"
             className="w-full border-b focus:border-accent outline-none px-3 py-2 bg-transparent"
             value={titulo}
             onChange={(e) => setTitulo(e.target.value)}
@@ -120,6 +120,7 @@ function Tarefas({ onToggleProjectState }: Props) {
           />
           <textarea
             placeholder="Descrição"
+            name="Tarefa Descrição"
             className="w-full border-b focus:border-accent outline-none px-3 resize-none py-2 bg-transparent"
             value={descricao}
             onChange={(e) => setDescricao(e.target.value)}
@@ -129,7 +130,7 @@ function Tarefas({ onToggleProjectState }: Props) {
               type="submit"
               className="btn btn-lg md:text-2xl font-bold "
             >
-              {idEditando ? "Atualizar" : "Salvar"}
+              {isEditando ? "Atualizar" : "Salvar"}
             </button>
             <button
               type="button"

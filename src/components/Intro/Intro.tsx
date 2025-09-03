@@ -2,7 +2,7 @@ import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../Variants";
 import { useTranslation } from "react-i18next";
-import Wrapper from "../wrapper/wrapper";
+import Wrapper from "../wrapper/Wrapper";
 import IntroLinks from "./IntroLinks";
 import IntroImg from "./IntroImg";
 

@@ -59,7 +59,7 @@ type Props = {
   onToggleProjectState: (value: boolean) => void;
 };
 
-export const RealtimeDatabase = ({ onToggleProjectState }: Props) => {
+const RealtimeDatabase = ({ onToggleProjectState }: Props) => {
   const [produtos, setProdutos] = useState<Produto[]>([]);
 
   useEffect(() => {
@@ -99,3 +99,5 @@ export const RealtimeDatabase = ({ onToggleProjectState }: Props) => {
     </ProjectWrapper>
   );
 };
+
+export default RealtimeDatabase

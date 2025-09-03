@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../../Variants";
 import { useTranslation } from "react-i18next";
-import Wrapper from "../wrapper/wrapper";
+import Wrapper from "../wrapper/Wrapper";
 import AboutData from "./AboutData";
 import { calculateDateDifference } from "../../utils/dateUtils";
 
@@ -58,7 +58,7 @@ const About = () => {
               {t("atext3")}
             </AboutData>
             <AboutData end={19}>{t("atext4")}</AboutData>
-            <AboutData end={193}>{t("atext5")}</AboutData>
+            <AboutData end={93}>{t("atext5")}</AboutData>
           </motion.div>
         </div>
       </Wrapper>

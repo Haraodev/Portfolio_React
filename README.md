@@ -40,6 +40,6 @@ Para rodar o projeto localmente, siga os passos abaixo:
 
 - LinkedIn: [Felipe Harão](https://linkedin.com/in/felipe-harão)
 - GitHub: [Harão](https://github.com/Haraodev/Portfolio_React)
-- Link do Portfólio: [portfolioharao.netlify.app](https://portfolioharao.netlify.app)
+- Link do Portfólio: [https://harao.netlify.app/](https://https://harao.netlify.app/)
 
 ---

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../../Variants";
 import { useTranslation } from "react-i18next";
-import Wrapper from "../wrapper/wrapper";
+import Wrapper from "../wrapper/Wrapper";
 import { useState } from "react";
 import { emailjsConfig } from "./EmailJSConfig";
 import emailjs from "emailjs-com";
@@ -76,7 +76,7 @@ const Contact = () => {
           <input
             className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all"
             type="text"
-            name="name"
+            name="nome"
             value={formData.name}
             onChange={handleChange}
             placeholder={t("ftext3")}
@@ -85,7 +85,7 @@ const Contact = () => {
           <input
             className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all"
             type="email"
-            name="email"
+            name="e-mail"
             value={formData.email}
             onChange={handleChange}
             placeholder={t("ftext4")}

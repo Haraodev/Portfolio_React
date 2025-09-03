@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../../Variants";
 import LanguageSwitcher from "../../translations/languageSwitcher";
 import logo from "../../assets/Harão.svg";
-import Wrapper from "../wrapper/wrapper";
+import Wrapper from "../wrapper/Wrapper";
 import { useTranslation } from "react-i18next";
 
 const Header = () => {
