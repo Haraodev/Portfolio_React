@@ -13,16 +13,16 @@ const Intro = () => {
       className=" bg-gradient-to-b from-bgprimary to-bgsecondary"
       id="Intro"
     >
-           
       <Wrapper>
         <div className="flex flex-col lg:gap-x-2 flex-1 text-center font-secondary">
-            <motion.div
-              variants={fadeIn("up", 0.4)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.7 }}
-              className="mb-6 text-3xl lg:text-4xl font-secondary font-semibold uppercase leading-[1] text-left"
-            >
+          <motion.div
+            variants={fadeIn("up", 0.4)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.7 }}
+            className=" text-2xl sm:text-3xl lg:text-4xl font-secondary font-semibold uppercase leading-[1] text-left mb-6"
+          >
+            
               <span className=" text-white mr-4">{t("intro")}</span>
               <TypeAnimation
                 sequence={[
@@ -34,23 +34,24 @@ const Intro = () => {
                   2000,
                 ]}
                 speed={50}
-                className="text-accent"
+                className="text-accent inline-block w-[9ch] text-left"
                 wrapper="span"
                 repeat={Infinity}
               />
-            </motion.div>
-            <motion.p
-              variants={fadeIn("up", 0.5)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.7 }}
-              className="text-3xl mb-8 max-w-lg  text-left font-semibold"
-            >
-              {t("welcome")}
-            </motion.p>
-            <IntroLinks />
-          </div>
-          <IntroImg />
+          
+          </motion.div>
+          <motion.p
+            variants={fadeIn("up", 0.5)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.7 }}
+            className="text-3xl mb-8 max-w-lg  text-left font-semibold"
+          >
+            {t("welcome")}
+          </motion.p>
+          <IntroLinks />
+        </div>
+        <IntroImg />
       </Wrapper>
     </section>
   );
