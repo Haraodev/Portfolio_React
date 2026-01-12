@@ -17,16 +17,16 @@ const Header = () => {
         viewport={{ once: false, amount: 0.7 }}
         className="flex w-full py-4 justify-between lg:justify-between items-center"
       >
-        <a href="/">
+        <a className="hover:text-blue-500" href="/">
           <div className="flex gap-2 items-center">
             <h1 className="lg:text-4xl font-bold">Felipe</h1>
             <img src={logo} className="w-14 lg:w-auto" alt="Harão" />
           </div>
         </a>
         <div className="hidden lg:flex gap-6 font-secondary text-4xl font-bold">
-        <a href="#About" >{t("header")}</a>
-        <a href="#Projects" >{t("header1")}</a>
-        <a href="#Contact" >{t("header2")}</a>
+        <a className="hover:text-blue-500" href="#About" >{t("header")}</a>
+        <a className="hover:text-blue-500" href="#Projects" >{t("header1")}</a>
+        <a className="hover:text-blue-500" href="#Contact" >{t("header2")}</a>
 
         </div>
         <LanguageSwitcher />
